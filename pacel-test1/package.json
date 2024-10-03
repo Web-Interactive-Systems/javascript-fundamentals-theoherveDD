@@ -1,0 +1,25 @@
+{
+  "name": "my-portfolio",
+  "version": "0.0.1",
+  "description": "...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx parcel index.html",
+    "build": "npx parcel build index.html",
+    "build:es": "node script/buildApp.mjs"
+  },
+  "author": "You",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "esbuild": "0.24.0",
+    "eslint": "^9.11.1",
+    "globals": "^15.10.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "date": "^2.0.5",
+    "date-fns": "^4.1.0"
+  }
+}
