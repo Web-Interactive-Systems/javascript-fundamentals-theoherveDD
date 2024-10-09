@@ -66,3 +66,17 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* @keyframes
+slideIn {
+  0% {
+    transform:rotate3d(23, 1, 10, 0deg);
+  }
+  100% {
+    transform:rotate3d(2, 3, 0, 360deg);
+  }
+}
+
+* {
+  animation: slideIn 1s linear infinite;
+} */
