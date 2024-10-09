@@ -4,55 +4,75 @@ const functions = {
   sum(a, b) {
     // Todo use typeof and throw
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
-    // Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
+    // Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/thro
+    if (typeof a === "number" && typeof b === "number"){
+      return a + b;
+    }
+
+    throw Error('LOLOLLO');
   },
 
   doubleNumbersInArray: function doubleNumbersInArray(array) {
     // Todo: use Array/map
     // Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
-    const double = function () {};
-
-    return array.map(double);
+    return array.map((x) => x * 2);
   },
 
   checkForBadWords(input) {
     // Todo: use Array/forEach and throw
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-    let grosMot = ['merde'];
+    let grosMot = ['Oh merde!'];
+    grosMot.forEach((item) => {
+      if (item === input) {
+        throw Error('No bad word please!');
+      }
+    });
   },
 
   nameOfWeekDay(index) {
-    const jours = [];
+    const jours = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    index = jours[index];
     return index;
   },
 
   sortNumbers(array) {
     // Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-
-    return array;
+    arraySort = array.sort((a,b) => a-b);
+    return arraySort;
   },
 
   createCounterFunction(input) {
-    return input;
+    let count = input;
+
+    const increment = () => {
+      count++
+      return count;
+    }
+    return increment;
   },
 
   createHelloMessage(name) {
     // Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-    return name;
+      return `Hello ${name}. Are you well?`;
   },
 
   callTheCallback(callback) {
     // Docs: https://developer.mozilla.org/en-US/docs/Glossary/Callback_function pas ;cc ENZO <3
-    return null;
+    callback(1, 2);
   },
 
   combineArrays(array1, array2) {
-    return [];
+    return [...array1, ...array2];
+
   },
 
   promiseMeMoney() {
-    return true;
-  },
+    return new Promise((resolve/*, reject*/) => {
+      setTimeout(() => {
+        return resolve('send message');
+      }, "100");
+    });
+  }
 };
 
 module.exports = functions;

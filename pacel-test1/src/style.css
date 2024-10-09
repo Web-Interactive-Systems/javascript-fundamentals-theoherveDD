@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+    width: 100vw;
+    height: 100vh;
+    font-family: Inter;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
